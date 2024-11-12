@@ -10,13 +10,14 @@ from tree_ops import print_tree
 
 '''
 Function to construct the base nodes of the tree and load base buy and sell signals
+x=32 for multiframe , x=16 for without multiframe
 '''
 def preprocess(df, x = 32):
     base_buy_trees = [TreeNode(i) for i in range(x)]
     base_sell_trees = [TreeNode(i) for i in range(x)]
 
     base_buy_signals = (df[df.columns[1:1+x]].values).T
-    base_sell_signals = (df[df.columns[1+x:1+2*x]].values).T
+    base_sell_signals = (df[df.columns[1+32:1+32+x]].values).T
     
     
     return base_buy_trees,base_sell_trees,base_buy_signals,base_sell_signals
