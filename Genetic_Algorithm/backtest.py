@@ -96,7 +96,7 @@ class Backtest:
 
     ''''
     Close the current position - sell all the bought lots or buy back the sold lots
-    (Can only buy back the lost that we have capital for, others still part of short postion)
+    (Can only buy back the lots that we have capital for, others still part of short postion)
     '''
     def close_position(self, day):
         if self.curr_position == -1:
