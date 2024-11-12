@@ -3,7 +3,7 @@ class TreeNode:
         '''
         this stores the value of the TreeNode.
         For operator it will be 0(AND),1(OR),2(NOT).
-        For filter values it can take values from 0-15
+        For filter values it can take values from 0 to number of base filters
         '''
         self.val=val
         self.left=left # denotes the left child of the node
