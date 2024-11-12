@@ -46,7 +46,8 @@ if __name__ == "__main__":
     dataset = df['Close'].values
 
     base_buy_trees,base_sell_trees,base_buy_signals,base_sell_signals = preprocess(df)
-
+    
+    # depth till which we want to run our algorithm
     depth = 6
     
     # Runs the algorithm and saves the results in a dictionary
