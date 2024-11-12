@@ -26,7 +26,7 @@ Generates mega alpha by taking the unweighted average of the signals provided by
 '''
 
 _, _, base_buy_signals, base_sell_signals = preprocess(df)
-window = 5 # use to judge the alpha fitness
+# window = 5 # use to judge the alpha fitness
 for d in range(2,max_depth+1):
     print("Depth = ",d)
     buy_opt, sell_opt, _, _ = dicti[d]
